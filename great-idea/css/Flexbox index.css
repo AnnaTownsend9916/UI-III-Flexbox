@@ -87,7 +87,7 @@ time, mark, audio, video {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+	display: flex;
 }
 body {
 	line-height: 1;
@@ -132,18 +132,15 @@ h1, h2, h3, h4, h5 {
 
 /* header */
 
-header  {
+header nav {
   display: flex;
+  width: 691px;
   vertical-align: top;
-  justify-content: space-around;
+  margin-top: 35px;
 }
 
- nav {
-   display:flex;
-  justify-content: space-between;
-  width: 40%;
- }
-  nav a{
+header nav a {
+  display: flex;
   font-size: 14px;
   color: gray;
   text-decoration: none;
@@ -153,21 +150,21 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* cta */
-.cta{
-  display: flex;
-  border: 1px solid red;
-  padding-top: 5/*0px;
-}
-.cta-text{
-  font-size: 77px;
-  width: 40%;
+header nav a:first-child {
+  margin-left: 0;
 }
 
-.top-img {
-  width: 40%;
+header nav a:last-child {
+  margin-right: 0;
 }
-/*
+
+header .logo {
+  display: flex;
+  margin-top: 25px;
+}
+
+/* cta */
+
 .cta .cta-text {
   display: flex;
   vertical-align: top;
@@ -180,7 +177,8 @@ header nav a:hover {
 .cta .cta-text button {
   background: white;
   vertical-align: top;
-align-items:  baseline;
+  margin-top: 6px;
+  padding: 8px 44px;
   font-size: 17px;
   border: 1px solid black;
   cursor: pointer;
