@@ -47,6 +47,7 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
+    /* constrains padding inside the border boundaries set by width and height  */
 }
 
 html, body {
@@ -64,15 +65,18 @@ h1, h2, h3, h4, h5 {
 
 .wrapper{
 	max-width:900px;
-	margin:auto;
+  margin:auto;
+  /* equal on both sides */
 }
 
 header{
-	display:flex;
+  display:flex;
+  /* naturally row */
 }
 
 header nav, div{
-	align-items:center;
+  align-items:center;
+  
 }
 
 .cta{
@@ -95,7 +99,8 @@ header nav, div{
 
 nav{
 	top:0px;
-	z-index: 998;
+  z-index: 998;
+  /* overlapping over smaller z-index */
 	background-color:white;
 	position:fixed;
 	width:60%;
